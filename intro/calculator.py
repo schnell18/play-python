@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+def square(n):
+    return n * n
+
 if __name__ == "__main__":
     x = int(input("Input x: "))
     y = int(input("Input y: "))
