@@ -29,15 +29,6 @@ def main():
         case _:
             print("Who?")
 
-
-
-
-
-
-
-
-
-
 if __name__ == "__main__":
     main()
 
