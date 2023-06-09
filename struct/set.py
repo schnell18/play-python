@@ -1,3 +1,7 @@
+def is_grayffindor(s):
+    return s["house"] == "Gryffindor"
+
+
 if __name__ == "__main__":
     students = [
         {"name": "Hermione", "house": "Gryffindor"},
@@ -13,3 +17,10 @@ if __name__ == "__main__":
 
     for house in sorted(houses):
         print(house)
+
+    gryffindors = map(lambda s: s["name"], filter(is_grayffindor, students))
+    for s in gryffindors:
+        print(s)
+
+    gryffindors = [s for s in students if is_grayffindor(s)]
+    print(gryffindors)
