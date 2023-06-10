@@ -2,3 +2,5 @@
 **/*.pyc
 **/*.swp
 **/*.swo
+.virtual_documents/
+.ipynb_checkpoints/
