@@ -10,8 +10,10 @@ def main():
     # print(f"Hello, {name}")
     print(hello(name))
 
+
 def hello(name="world"):
     return f"Hello, {name}"
+
 
 """
 Simple hello world program
