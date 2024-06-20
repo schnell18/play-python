@@ -17,5 +17,6 @@ This is a collection mini Python projects to practise *Python* programming.
 | struct             | explore set/map etc                |
 | tax-cal            | calculation example                |
 | jupyter            | explore jupyter-lab                |
+| python-c-extension | simple c extension eample          |
 
 [1]: https://www.youtube.com/watch?v=nLRL_NcnK-4

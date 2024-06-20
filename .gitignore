@@ -2,5 +2,11 @@
 **/*.pyc
 **/*.swp
 **/*.swo
+dist/
+*.egg-info/
+*.out
+*.log
+__pycache__/
+.pytest_cache/
 .virtual_documents/
 .ipynb_checkpoints/

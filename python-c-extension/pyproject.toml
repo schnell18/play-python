@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fputs"
+# version = "0.1.0"
+description = "Python interface for the fputs C library function"
+authors = [
+  {name = "Justin Zhang", email = "schnell18@gmail.com"},
+]
+maintainers = [
+  {name = "Justin Zhang", email = "schnell18@gmail.com"},
+]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Private :: Do Not Upload",
+    "Development Status :: 3 - Alpah",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: Apache Software License",
+]
+keywords = ["c extension"]
+dependencies = []
+dynamic = ["version"]
+
+[tool.setuptools.packages.find]
+exclude = ["results*", "scripts*", "examples*"]
+
+[tool.wheel]
+exclude = ["results*", "scripts*", "examples*"]
+
+[tool.setuptools_scm]
+root = ".."
