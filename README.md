@@ -19,5 +19,6 @@ This is a collection mini Python projects to practise *Python* programming.
 | jupyter            | explore jupyter-lab                |
 | python-c-extension | simple c extension eample          |
 | rmbg               | remove image background            |
+| pdf-extract        | extract PDF tables                 |
 
 [1]: https://www.youtube.com/watch?v=nLRL_NcnK-4
