@@ -22,5 +22,6 @@ This is a collection mini Python projects to practise *Python* programming.
 | pdf-extract        | extract PDF tables                 |
 | python-daily       | small daily Python snippets        |
 | concurrency        | Python concurrency demonstrations  |
+| GIL                | Compare GIL/non-GIL performance    |
 
 [1]: https://www.youtube.com/watch?v=nLRL_NcnK-4
