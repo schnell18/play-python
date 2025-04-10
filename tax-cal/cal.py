@@ -8,6 +8,7 @@ rates = [
     [128, 999999, 0.02],
 ]
 
+
 def cal_tax(initial, capacity):
     remaining = capacity
     tax = 0
@@ -21,6 +22,6 @@ def cal_tax(initial, capacity):
     return 100 * (initial + tax) / capacity
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     for i in range(1, 100):
         print("AKS reserved percent %dG=%.2f%%" % (i, cal_tax(0.75, i)))

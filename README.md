@@ -6,8 +6,9 @@ This is a collection mini Python projects to practise *Python* programming.
 
 | sub-directory      | comment                            |
 | ------------------ | ---------------------------------- |
+| async              | showcase the [coroutine][2]        |
 | print              | showcase the print() function      |
-| intro              | [Harvard CS50 intro to python][1]  |
+| hvd-cs50           | [Harvard CS50 intro to python][1]  |
 | functional         | explore functional programming     |
 | generator          | explore generator w/ web scrapper  |
 | instaviz           | visualize Python AST w/ instaviz   |
@@ -25,3 +26,4 @@ This is a collection mini Python projects to practise *Python* programming.
 | GIL                | Compare GIL/non-GIL performance    |
 
 [1]: https://www.youtube.com/watch?v=nLRL_NcnK-4
+[2]: https://docs.python.org/3/library/asyncio-task.html
