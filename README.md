@@ -24,6 +24,7 @@ This is a collection mini Python projects to practise *Python* programming.
 | python-daily       | small daily Python snippets        |
 | concurrency        | Python concurrency demonstrations  |
 | GIL                | Compare GIL/non-GIL performance    |
+| diagram-of-code    | Explore creating diagram by code   |
 
 [1]: https://www.youtube.com/watch?v=nLRL_NcnK-4
 [2]: https://docs.python.org/3/library/asyncio-task.html
