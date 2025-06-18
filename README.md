@@ -25,6 +25,8 @@ This is a collection mini Python projects to practise *Python* programming.
 | concurrency        | Python concurrency demonstrations  |
 | GIL                | Compare GIL/non-GIL performance    |
 | diagram-of-code    | Explore creating diagram by code   |
+| [chatterbox][3]    | Explore a voice-cloning TTS model  |
 
 [1]: https://www.youtube.com/watch?v=nLRL_NcnK-4
 [2]: https://docs.python.org/3/library/asyncio-task.html
+[3]: https://github.com/resemble-ai/chatterbox
