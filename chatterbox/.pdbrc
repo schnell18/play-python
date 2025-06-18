@@ -1,0 +1,83 @@
+# .pdbrc - Python debugger configuration for ChatterboxTTS debugging
+# Place this file in your home directory or project root
+
+# Set up aliases for common debugging commands
+alias ll longlist
+alias st stack
+alias wh where
+alias pp pp %1
+
+# Enable automatic listing of source code around current line
+alias l list
+set listsize 10
+
+# Breakpoints based on the stack trace
+# Main entry point
+b /home/justin/work/explore/play-python/chatterbox/generate.py:6
+
+# ChatterboxTTS.from_pretrained method
+b /home/justin/work/explore/play-python/chatterbox/.venv/lib/python3.11/site-packages/chatterbox/tts.py:180
+
+# ChatterboxTTS.from_local method
+b /home/justin/work/explore/play-python/chatterbox/.venv/lib/python3.11/site-packages/chatterbox/tts.py:165
+
+b /home/justin/work/explore/play-python/chatterbox/.venv/lib/python3.11/site-packages/perth/__init__.py:13
+
+# ChatterboxTTS.__init__ method (where the error occurs)
+b /home/justin/work/explore/play-python/chatterbox/.venv/lib/python3.11/site-packages/chatterbox/tts.py:125
+
+# Print helpful debugging info when breakpoints are hit
+commands 1
+print("=== At main() entry point ===")
+print(f"About to call ChatterboxTTS.from_pretrained(device='cuda')")
+c
+end
+
+commands 2
+print("=== In ChatterboxTTS.from_pretrained ===")
+print(f"local_path: {locals().get('local_path', 'Not set')}")
+print(f"device: {locals().get('device', 'Not set')}")
+c
+end
+
+commands 3
+print("=== In ChatterboxTTS.from_local ===")
+print(f"path: {locals().get('path', 'Not set')}")
+print(f"device: {locals().get('device', 'Not set')}")
+print(f"Available variables: {list(locals().keys())}")
+c
+end
+
+commands 4
+print("=== In ChatterboxTTS.__init__ (ERROR LOCATION) ===")
+print(f"self: {type(locals().get('self', 'Not set'))}")
+print(f"device: {locals().get('device', 'Not set')}")
+print("About to create PerthImplicitWatermarker...")
+print("Checking if 'perth' module is accessible...")
+try:
+    import perth
+    print(f"perth module found: {perth}")
+    print(f"PerthImplicitWatermarker class: {perth.PerthImplicitWatermarker}")
+except ImportError as e:
+    print(f"ImportError: {e}")
+except AttributeError as e:
+    print(f"AttributeError: {e}")
+except Exception as e:
+    print(f"Other error: {e}")
+# Don't continue automatically here - let user investigate
+end
+
+# Additional useful commands for debugging
+alias inspect_perth !import perth; print(dir(perth))
+alias check_cuda !import torch; print(f"CUDA available: {torch.cuda.is_available()}")
+alias show_locals pp locals()
+alias show_globals pp globals()
+
+# Print instructions when pdb starts
+print("=== ChatterboxTTS Debug Session ===")
+print("Breakpoints set at key locations in the call stack")
+print("Use 'c' to continue to next breakpoint")
+print("Use 'inspect_perth' to examine the perth module")
+print("Use 'check_cuda' to verify CUDA availability")
+print("Use 'show_locals' or 'show_globals' to inspect variables")
+print("=====================================")
